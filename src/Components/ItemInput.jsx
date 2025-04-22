@@ -1,52 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function ItemInput() {
+  const [formData, setFormData] = useState({
+    budget: " ",
+    itemName: " ",
+    itemPrice: " ",
+    category: " ",
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = {
+      budget,
+      itemName,
+      itemPrice,
+      category,
+    };
+    console.log(formData);
+  }
+  console.log(formData);
+
+  function handleChange(event) {
+    const key = event.target.id;
+    setFormData({
+      ...formData,
+      [key]: event.target.value,
+    });
+  }
+
   return (
     <div>
       <form
         action=""
         className="pl-5 border-2 rounded-xl w-2xs"
-        onSubmit={(e) => {
-          e.preventDefault
-        console.log("submitted")
-        }}
+        onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 pb-2.5">
           <label htmlFor="">Budget</label>
           <input
             type="number"
+            id="budget"
+            value={formData.budget}
             placeholder="Add Budget"
+            onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
           <label htmlFor="">Item name</label>
           <input
             type="text"
+            id="item-name"
+            value={formData.itemName}
             placeholder="Enter item"
+            onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
           <label htmlFor="">Item Price</label>
           <input
             type="text"
+            id="price"
+            value={formData.itemPrice}
             placeholder="Enter Price"
+            onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
           <label htmlFor="">Category</label>
           <input
             type="text"
+            id="category"
+            value={formData.category}
             placeholder="Enter Category"
+            onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
-          <div>
-            <button
-              className="bg-blue-400  mt-2 rounded-lg w-full"
-              onClick={(e) => {
-                e.preventDefault;
-                console.log("button Clicked");
-              }}
-            >
-              Add Item
-            </button>
-          </div>
+          <input type="submit" value="Add Item" />
         </div>
       </form>
     </div>
