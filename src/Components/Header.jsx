@@ -7,7 +7,7 @@ export function Header() {
         <h1 className="text-xl font-semibold text-center">
           🛒 SHOPPING MANAGER 🛒
           <br />
-          <Link to={"/title"}>
+          <Link to={"/input"}>
             <button className="bg-green-600 px-4 rounded cursor-pointer hover:bg-purple-700">
               Input details
             </button>
