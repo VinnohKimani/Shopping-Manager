@@ -15,6 +15,9 @@ export function ItemInput() {
       itemName,
       itemPrice,
       category,
+      
+
+      
     };
     console.log(formData);
   }
@@ -72,7 +75,9 @@ export function ItemInput() {
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
-          <input type="submit" value="Add Item" />
+          <button className="bg-green-600 px-4 rounded hover:bg-purple-700" >
+            <input type="submit" value="Add Item" />
+          </button>
         </div>
       </form>
     </div>
