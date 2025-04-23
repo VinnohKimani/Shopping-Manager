@@ -4,6 +4,7 @@ import { ItemInput } from "./Components/ItemInput";
 import { ItemTable } from "./Components/ItemTable";
 import { Notification } from "./Components/Notification";
 import { Footer } from "./Components/Footer";
+import { BudgetCard } from ".components/BudgetCard"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ItemTable />
       <Notification />
       <Footer />
+      <BudgetCard />
     </>
   );
 }
