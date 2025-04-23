@@ -2,6 +2,6 @@ import React from "react"
 
 export function Notification() {
     return (
-        <div></div>
+        <div className="border col-span-3"> </div>
     )
 }

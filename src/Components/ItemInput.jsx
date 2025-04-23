@@ -29,10 +29,10 @@ export function ItemInput() {
   }
 
   return (
-    <div>
+    <div className="col-span-3 ">
       <form
         action=""
-        className="pl-5 border-2 rounded-xl w-2xs"
+        className="border-2 rounded-xl p-3"
         onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 pb-2.5">

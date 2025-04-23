@@ -3,7 +3,7 @@ import { GoodToPurchace } from "./GoodToPurchace";
 
 export function ItemTable() {
   return (
-    <div>
+    <div className="col-span-6 border">
       <GoodToPurchace />
     </div>
   );
