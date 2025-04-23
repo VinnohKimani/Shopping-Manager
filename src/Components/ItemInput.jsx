@@ -1,45 +1,50 @@
 import React, { useState } from "react";
+const initialValues = {
+  budget: " ",
+  itemName: " ",
+  itemPrice: " ",
+  category: " ",
+};
 
 export function ItemInput() {
-  const [formData, setFormData] = useState({
-    budget: " ",
-    itemName: " ",
-    itemPrice: " ",
-    category: " ",
-  });
+  const [formData, setFormData] = useState(initialValues);
+  console.log(formData);
 
   function handleSubmit(event) {
     event.preventDefault();
-    const formData = {
+    console.log("form submitted");
+    /* const formData = {
       budget,
       itemName,
       itemPrice,
       category,
     };
-    console.log(formData);
+    console.log(formData); */
   }
-  console.log(formData);
 
   function handleChange(event) {
-    const key = event.target.id;
+    const { name, value } = event.target;
+    setFormData((prev) => {
+      console.log(prev);
+      return { ...prev, [name]: value };
+    });
+
+    /*  const key = event.target.id;
     setFormData({
       ...formData,
       [key]: event.target.value,
     });
+     */
   }
 
   return (
     <div className="col-span-3 ">
-      <form
-        action=""
-        className="border-2 rounded-xl p-3"
-        onSubmit={handleSubmit}
-      >
+      <form action="" className="border rounded-xl p-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 pb-2.5">
           <label htmlFor="">Budget</label>
           <input
             type="number"
-            id="budget"
+            name="budget"
             value={formData.budget}
             placeholder="Add Budget"
             onChange={handleChange}
@@ -48,7 +53,7 @@ export function ItemInput() {
           <label htmlFor="">Item name</label>
           <input
             type="text"
-            id="item-name"
+            name="itemName"
             value={formData.itemName}
             placeholder="Enter item"
             onChange={handleChange}
@@ -56,8 +61,8 @@ export function ItemInput() {
           />
           <label htmlFor="">Item Price</label>
           <input
-            type="text"
-            id="price"
+            type="number"
+            name="itemPrice"
             value={formData.itemPrice}
             placeholder="Enter Price"
             onChange={handleChange}
@@ -66,7 +71,7 @@ export function ItemInput() {
           <label htmlFor="">Category</label>
           <input
             type="text"
-            id="category"
+            name="category"
             value={formData.category}
             placeholder="Enter Category"
             onChange={handleChange}
