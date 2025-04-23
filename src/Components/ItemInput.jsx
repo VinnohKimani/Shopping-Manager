@@ -75,7 +75,7 @@ export function ItemInput() {
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
           />
-          <button className="bg-green-600 px-4 rounded hover:bg-purple-700" >
+          <button className="bg-green-600 px-4 rounded hover:bg-purple-700 cursor-pointer" >
             <input type="submit" value="Add Item" />
           </button>
         </div>
