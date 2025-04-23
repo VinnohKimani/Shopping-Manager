@@ -10,7 +10,7 @@ function App() {
   const [budget, setBudget] = useState("");
 
   return (
-    <div className="">
+    <div className="bg-slate-50">
       <Header />
       <div className="grid grid-cols-12 gap-[10px] mx-2">
         <ItemInput
