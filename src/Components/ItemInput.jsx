@@ -49,6 +49,9 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
       itemName,
       itemPrice,
       category,
+      
+
+      
     };
     console.log(formData); */
   }
@@ -116,6 +119,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             value="Add Item"
             className="border mt-4 rounded-sm bg-green-400"
           />
+          <button className="bg-green-600 px-4 rounded hover:bg-purple-700">Add Item</button>
         </div>
       </form>
     </div>
