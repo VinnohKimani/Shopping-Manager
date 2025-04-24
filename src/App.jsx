@@ -2,16 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Header } from "./Components/Header";
 import { ItemInput } from "./Components/ItemInput";
 import { ItemTable } from "./Components/ItemTable";
-import { Notification } from "./Components/Notification";
+import { Wallet } from "./Components/Wallet";
 import { Footer } from "./Components/Footer";
 
 function App() {
   const [items, setItems] = useState([]);
   const [budget, setBudget] = useState("");
 
+    const handleAddBudget = (newBudget) => {
+      setBudget(newBudget);
+    };
+
+
   //function to receive data from child itemInput
   //data is refreshed via handlefetch
- /*  const handleFormSubmitted = (newData) => {
+  /*  const handleFormSubmitted = (newData) => {
     setItems((prev) => [...prev, newData]);
   }; */
   //here we are fetching initial data from server (for component mount)
@@ -39,6 +44,7 @@ function App() {
           setItems={setItems}
           budget={budget}
           setBudget={setBudget}
+          onAddBudget={handleAddBudget}
         />
         <ItemTable
           handleFetch={handleFetch}
@@ -47,7 +53,7 @@ function App() {
           setItems={setItems}
           budget={budget}
         />
-        <Notification />
+        <Wallet budget={budget} />
       </div>
       <Footer />
     </div>
