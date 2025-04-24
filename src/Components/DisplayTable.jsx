@@ -6,9 +6,9 @@ const DisplayTable = ({ formInputFields }) => {
     <div>
       <table className="h-47 w-full bg-slate-100 border">
         <caption className="text-lg font-bold p-2 border bg-stone-100">
-          My Expenses
+          My Items
         </caption>
-        <thead className="bg-amber-50">
+        <thead className="bg-green-50">
           <tr>
             {/* <th>&nbsp;</th>  */}
             <th scope="col">Item Name</th>
