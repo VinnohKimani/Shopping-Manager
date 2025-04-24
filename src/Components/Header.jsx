@@ -21,11 +21,6 @@ export function Header() {
           </Link>
           <br />
           <br />
-          <Link to={"/all"}>
-            <button className="bg-green-600 px-4 rounded cursor-pointer hover:bg-purple-700">
-              Home
-            </button>
-          </Link>
         </h1>
       </header>
     </div>
