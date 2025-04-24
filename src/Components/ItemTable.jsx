@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import DisplayTable from "./DisplayTable";
 
-export function ItemTable({ items = [], setItems, budget = 0 }) {
+export function ItemTable({
+  items = [],
+  setItems,
+  budget = 0,
+  formInputFields,
+}) {
   const [filter, setFilter] = useState("all");
 
   const handleToggle = (index) => {
@@ -83,6 +89,7 @@ export function ItemTable({ items = [], setItems, budget = 0 }) {
       >
         {isWithinBudget ? "Good to purchase" : "Over budget!"}
       </div>
+      <DisplayTable formInputFields={formInputFields} />
     </div>
   );
 }
