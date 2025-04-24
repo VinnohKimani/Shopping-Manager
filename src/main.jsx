@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element:<Header/>
   },
   {
-    path: "/all",
+    path: "/",
     element:<App/>
   }
 
