@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 export function ItemInput() {
   const [formData, setFormData] = useState({
-    budget: " ",
-    itemName: " ",
-    itemPrice: " ",
-    category: " ",
+    budget: "",
+    itemName: "",
+    itemPrice: "",
+    category: "",
   });
 
   function handleSubmit(event) {
@@ -16,7 +16,6 @@ export function ItemInput() {
       itemPrice,
       category,
     };
-    console.log(formData);
   }
   console.log(formData);
 
@@ -48,7 +47,7 @@ export function ItemInput() {
           <label htmlFor="">Item name</label>
           <input
             type="text"
-            id="item-name"
+            id="itemName"
             value={formData.itemName}
             placeholder="Enter item"
             onChange={handleChange}
@@ -57,7 +56,7 @@ export function ItemInput() {
           <label htmlFor="">Item Price</label>
           <input
             type="text"
-            id="price"
+            id="itemPrice"
             value={formData.itemPrice}
             placeholder="Enter Price"
             onChange={handleChange}
