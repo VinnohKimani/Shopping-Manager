@@ -5,6 +5,7 @@ import { ItemTable } from "./Components/ItemTable";
 import { Notification } from "./Components/Notification";
 import { Footer } from "./Components/Footer";
 import Contacts from "./Components/Contacts";
+import Page  from "./Components/Page.jsx";
 
 function App() {
   const [items, setItems] = useState([]);
