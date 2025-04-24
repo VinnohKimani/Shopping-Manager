@@ -13,6 +13,69 @@
       "itemName": "books",
       "itemPrice": "3000",
       "category": "library"
+    },
+    {
+      "id": "d030",
+      "budget": "",
+      "itemName": "",
+      "itemPrice": "",
+      "category": ""
+    },
+    {
+      "id": "b3ba",
+      "budget": "",
+      "itemName": "",
+      "itemPrice": "",
+      "category": ""
+    },
+    {
+      "id": "9f5d",
+      "budget": "60000000",
+      "itemName": "Supra",
+      "itemPrice": "3000000",
+      "category": " fastest car"
+    },
+    {
+      "id": "9d3e",
+      "budget": "",
+      "itemName": "",
+      "itemPrice": "",
+      "category": ""
+    },
+    {
+      "id": "e6d8",
+      "budget": "800000",
+      "itemName": "GTR",
+      "itemPrice": "3000000",
+      "category": "Car"
+    },
+    {
+      "id": "f0d8",
+      "budget": "5000",
+      "itemName": "Rolex",
+      "itemPrice": "30000",
+      "category": "Watch"
+    },
+    {
+      "id": "7939",
+      "budget": "500",
+      "itemName": "towel",
+      "itemPrice": "450",
+      "category": "clothes"
+    },
+    {
+      "id": "d96b",
+      "budget": "8000",
+      "itemName": "Suit",
+      "itemPrice": "7500",
+      "category": "clothes"
+    },
+    {
+      "id": "cba9",
+      "budget": "6000",
+      "itemName": "earpods",
+      "itemPrice": "5000",
+      "category": "gadgets"
     }
   ]
 }

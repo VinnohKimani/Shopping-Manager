@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initialValues = {
   budget: "",
@@ -17,6 +19,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
 
     //stringyfy
     //console.log(JSON.stringify(formData))
+    // loading toast notification
 
     // send the data to json server
 
@@ -31,6 +34,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        // will show toast success
+        toast.success("Item Added Successfully!");
         //execute handle fetch
         handleFetch();
 
@@ -40,6 +45,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
         setFormData(initialValues);
       })
       .catch(() => {
+        // show toast error
+        // toast.error("Failed to add item!");
         // handle any errors that might occur
         console.log("Unable to publish blog");
       });
@@ -83,6 +90,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             placeholder="Add Budget"
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
+            required
           />
           <label htmlFor="">Item name</label>
           <input
@@ -93,6 +101,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             placeholder="Item Name"
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
+            required
           />
           <label htmlFor="">Item Price</label>
           <input
@@ -103,6 +112,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             placeholder="Enter Price"
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
+            required
           />
           <label htmlFor="">Category</label>
           <input
@@ -113,13 +123,24 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             placeholder="Enter Category"
             onChange={handleChange}
             className="bg-amber-100 rounded-lg"
+            required
           />
-          <input
-            type="submit"
-            value="Add Item"
-            className="border mt-4 rounded-sm bg-green-400"
-          />
-          <button className="bg-green-600 px-4 rounded hover:bg-purple-700">Add Item</button>
+          <div>
+            <input
+              type="submit"
+              value="Add Item"
+              className="border mt-4 rounded-sm bg-green-400"
+            />
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              closeOnClick
+              pauseOnHover
+              draggable
+              theme="colored"
+            />
+          </div>
         </div>
       </form>
     </div>
