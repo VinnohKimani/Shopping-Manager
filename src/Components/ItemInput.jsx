@@ -3,7 +3,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const initialValues = {
-  budget: "",
   itemName: "",
   itemPrice: "",
   category: "",
@@ -81,17 +80,6 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
     <div className="col-span-3 ">
       <form action="" className="border rounded-xl p-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 pb-2.5">
-          <label htmlFor="">Budget</label>
-          <input
-            type="number"
-            id=""
-            name="budget"
-            value={formData.budget}
-            placeholder="Add Budget"
-            onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
-            required
-          />
           <label htmlFor="">Item name</label>
           <input
             type="text"
