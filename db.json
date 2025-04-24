@@ -13,6 +13,20 @@
       "itemName": "books",
       "itemPrice": "3000",
       "category": "library"
+    },
+    {
+      "id": "d030",
+      "budget": "",
+      "itemName": "",
+      "itemPrice": "",
+      "category": ""
+    },
+    {
+      "id": "b3ba",
+      "budget": "",
+      "itemName": "",
+      "itemPrice": "",
+      "category": ""
     }
   ]
 }
