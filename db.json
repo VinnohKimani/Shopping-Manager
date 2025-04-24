@@ -1,0 +1,18 @@
+{
+  "shoppingitems": [
+    {
+      "id": "bad1",
+      "budget": "4000",
+      "itemName": "books",
+      "itemPrice": "3000",
+      "category": "library"
+    },
+    {
+      "id": "24b8",
+      "budget": "30000",
+      "itemName": "books",
+      "itemPrice": "3000",
+      "category": "library"
+    }
+  ]
+}
