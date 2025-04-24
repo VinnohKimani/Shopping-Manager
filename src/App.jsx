@@ -4,6 +4,7 @@ import { ItemInput } from "./Components/ItemInput";
 import { ItemTable } from "./Components/ItemTable";
 import { Wallet } from "./Components/Wallet";
 import { Footer } from "./Components/Footer";
+import Contacts from "./Components/Contacts";
 
 function App() {
   const [items, setItems] = useState([]);
