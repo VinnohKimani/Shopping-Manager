@@ -97,7 +97,7 @@ export function ItemInput({
             value={formData.itemName}
             placeholder="Item Name"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
             required
           />
           <label htmlFor="">Item Price</label>
@@ -108,7 +108,7 @@ export function ItemInput({
             value={formData.itemPrice}
             placeholder="Enter Price"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
             required
           />
           <label htmlFor="">Category</label>
@@ -119,14 +119,14 @@ export function ItemInput({
             value={formData.category}
             placeholder="Enter Category"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
             required
           />
           <div>
             <input
               type="submit"
               value="Add Item"
-              className="border mt-4 rounded-sm bg-indigo-200 hover:bg-[#4F46E5] w-full"
+              className="border mt-4 rounded-sm bg-indigo-200 hover:bg-[#4F46E5] text-xl font-bold w-full"
             />
             <ToastContainer
               position="top-right"

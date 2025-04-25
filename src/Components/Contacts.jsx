@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
-    <div className="p-4">
+    <div className="p-10 bg-[#FDE68A] h-screen">
+      <div>
+        <Link to={"/addBudget"}>
+          <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
+            Go back Home
+          </button>
+        </Link>
+      </div>
       <h1 className="text-xl font-bold mb-2">Reach out to us:</h1>
       <ul className="list-disc list-inside">
         <li>
@@ -47,13 +54,6 @@ const ContactUs = () => {
           </a>
         </li>
       </ul>
-      <div>
-        <Link to={"/addBudget"}>
-          <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
-            Home
-          </button>
-        </Link>
-      </div>
     </div>
   );
 };
