@@ -13,6 +13,7 @@ export function ItemTable({
 
   const handleToggle = (index) => {
     const newItems = [...items];
+    console.log(newItems)
     newItems[index].purchased = !newItems[index].purchased;
     setItems(newItems);
   };

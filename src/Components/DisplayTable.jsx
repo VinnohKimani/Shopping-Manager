@@ -13,7 +13,11 @@ const DisplayTable = ({ formInputFields, onDelete }) => {
         <caption className="text-lg font-bold p-2 border bg-stone-100">
           My Items
         </caption>
+<<<<<<< HEAD
+        <thead className="bg-green-50">
+=======
         <thead className="bg-green-200">
+>>>>>>> main
           <tr>
             {/* <th>&nbsp;</th>  */}
             <th scope="col">Item Name</th>

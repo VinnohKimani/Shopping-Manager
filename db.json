@@ -13,6 +13,12 @@
       "category": "library"
     },
     {
+<<<<<<< HEAD
+      "id": "a872",
+      "budget": "5000",
+      "itemName": "books",
+      "itemPrice": "3000",
+=======
       "id": "ee4b",
       "itemName": "books",
       "itemPrice": "300",
@@ -22,6 +28,7 @@
       "id": "918d",
       "itemName": "books",
       "itemPrice": "300",
+>>>>>>> main
       "category": "library"
     }
   ]
