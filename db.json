@@ -1,34 +1,10 @@
 {
+  "budget": [],
   "shoppingitems": [
     {
-      "id": "d523",
+      "id": "68de",
       "itemName": "books",
-      "itemPrice": "300",
-      "category": "library"
-    },
-    {
-      "id": "d8ff",
-      "itemName": "books",
-      "itemPrice": "300",
-      "category": "library"
-    },
-    {
-<<<<<<< HEAD
-      "id": "a872",
-      "budget": "5000",
-      "itemName": "books",
-      "itemPrice": "3000",
-=======
-      "id": "ee4b",
-      "itemName": "books",
-      "itemPrice": "300",
-      "category": "library"
-    },
-    {
-      "id": "918d",
-      "itemName": "books",
-      "itemPrice": "300",
->>>>>>> main
+      "itemPrice": "30000",
       "category": "library"
     }
   ]

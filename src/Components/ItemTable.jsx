@@ -13,7 +13,7 @@ export function ItemTable({
 
   const handleToggle = (index) => {
     const newItems = [...items];
-    console.log(newItems)
+    console.log(newItems);
     newItems[index].purchased = !newItems[index].purchased;
     setItems(newItems);
   };
@@ -77,7 +77,7 @@ export function ItemTable({
             </span>
             <FaTrash
               onClick={() => handleDelete(index)}
-              className="text-red-500 font-bold"
+              className="text-[#F59E0B] hover:text-red-500 font-bold"
             ></FaTrash>
           </div>
         ))
@@ -90,6 +90,7 @@ export function ItemTable({
       >
         {isWithinBudget ? "Good to purchase" : "Over budget!"}
       </div>
+      <br />
       <DisplayTable formInputFields={formInputFields} onDelete={onDelete} />
     </div>
   );

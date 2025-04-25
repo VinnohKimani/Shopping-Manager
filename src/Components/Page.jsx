@@ -15,7 +15,7 @@ const Page = () => {
 
         <h2>Your budget your freedom!!</h2>
         <Link to={"/addBudget"}>
-          <button className="bg-green-600 px-4 rounded cursor-pointer hover:bg-purple-700">
+          <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
             Home
           </button>
         </Link>
