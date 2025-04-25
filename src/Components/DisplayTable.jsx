@@ -10,7 +10,7 @@ const DisplayTable = ({ formInputFields, onDelete }) => {
   return (
     <div>
       <table className="h-47 w-full bg-slate-100 border rounded-2xl">
-        <caption className="text-lg font-bold p-2 border bg-stone-100 rounded-sm">
+        <caption className="text-xl font-bold p-2 border bg-stone-100 rounded-sm">
           My Items
         </caption>
         <thead className="bg-green-200">
