@@ -10,7 +10,7 @@ const initialValues = {
 };
 
 export function ItemInput({
-  onformSubmittedData,
+  // onformSubmittedData,
   handleFetch,
   budget,
   setBudget,
@@ -46,7 +46,7 @@ export function ItemInput({
         handleFetch();
 
         //send to parent
-        onformSubmittedData(formData);
+        // onformSubmittedData(formData);
         //clear the form
         setFormData(initialValues);
       })
