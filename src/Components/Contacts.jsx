@@ -5,9 +5,9 @@ const ContactUs = () => {
   return (
     <div className="p-10 bg-[#FDE68A] h-screen">
       <div>
-        <Link to={"/addBudget"}>
+        <Link to={"/shopping-manager"}>
           <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
-            Go back Home
+            Go back to shopping manager
           </button>
         </Link>
       </div>

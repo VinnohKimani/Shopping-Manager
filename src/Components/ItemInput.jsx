@@ -10,7 +10,7 @@ const initialValues = {
 };
 
 export function ItemInput({
-  onformSubmittedData,
+  // onformSubmittedData,
   handleFetch,
   budget,
   setBudget,
@@ -29,7 +29,7 @@ export function ItemInput({
 
     // send the data to json server
 
-    fetch("http://localhost:3004/shoppingitems", {
+    fetch("http://localhost:3000/shoppingitems", {
       method: "POST",
       headers: {
         Accept: "*/*",
@@ -46,7 +46,7 @@ export function ItemInput({
         handleFetch();
 
         //send to parent
-        onformSubmittedData(formData);
+        // onformSubmittedData(formData);
         //clear the form
         setFormData(initialValues);
       })
