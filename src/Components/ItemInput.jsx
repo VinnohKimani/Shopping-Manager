@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Budget } from "./BudgetCard";
 
 const initialValues = {
-  budget: "",
   itemName: "",
   itemPrice: "",
   category: "",
 };
 
-export function ItemInput({ onformSubmittedData, handleFetch }) {
+export function ItemInput({
+  onformSubmittedData,
+  handleFetch,
+  budget,
+  setBudget,
+  onAddBudget,
+}) {
   const [formData, setFormData] = useState(initialValues);
   //console.log(formData);
 
@@ -79,19 +85,9 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
 
   return (
     <div className="col-span-3 ">
+      <Budget budget={budget} setBudget={setBudget} onAddBudget={onAddBudget} />
       <form action="" className="border rounded-xl p-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 pb-2.5">
-          <label htmlFor="">Budget</label>
-          <input
-            type="number"
-            id=""
-            name="budget"
-            value={formData.budget}
-            placeholder="Add Budget"
-            onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
-            required
-          />
           <label htmlFor="">Item name</label>
           <input
             type="text"
@@ -133,7 +129,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             />
             <ToastContainer
               position="top-right"
-              autoClose={3000}
+              autoClose={5000}
               hideProgressBar={false}
               closeOnClick
               pauseOnHover
