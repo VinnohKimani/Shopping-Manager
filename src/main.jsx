@@ -7,6 +7,7 @@ import { Header } from "./Components/Header.jsx";
 import { ItemInput } from "./Components/ItemInput.jsx";
 
 import Contacts from "./Components/Contacts.jsx";
+import Page from "./Components/Page.jsx";
 
 const router = createBrowserRouter([
   {
