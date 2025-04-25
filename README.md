@@ -54,3 +54,6 @@ InputCard-addItem button
 TableCard-DeleteButton
 good to purchase -- child to tableCard component
 Notifaction-within budget or not
+
+## Link to the website
+   https://shopping-manager.vercel.app/
