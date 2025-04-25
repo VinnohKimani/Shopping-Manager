@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
-    <div className="p-10 bg-[#FDE68A] h-screen">
+    <div className="p-10 bg-indigo-200 h-screen">
       <div>
         <Link to={"/shopping-manager"}>
           <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
