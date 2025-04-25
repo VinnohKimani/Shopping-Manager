@@ -5,15 +5,15 @@ import { ItemTable } from "./Components/ItemTable";
 import { Wallet } from "./Components/Wallet";
 import { Footer } from "./Components/Footer";
 import Contacts from "./Components/Contacts";
+import Page  from "./Components/Page.jsx";
 
 function App() {
   const [items, setItems] = useState([]);
   const [budget, setBudget] = useState("");
 
-    const handleAddBudget = (newBudget) => {
-      setBudget(newBudget);
-    };
-
+  const handleAddBudget = (newBudget) => {
+    setBudget(newBudget);
+  };
 
   //function to receive data from child itemInput
   //data is refreshed via handlefetch
@@ -25,7 +25,7 @@ function App() {
     fetch("http://localhost:3004/shoppingitems")
       .then((response) => response.json())
       .then((fetchedItems) => {
-        console.log(fetchedItems);
+        //console.log(fetchedItems);
         setItems(fetchedItems);
       })
       .catch((err) => console.error(err));
@@ -35,10 +35,21 @@ function App() {
     handleFetch();
   }, []);
 
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3004/shoppingitems/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        // Update state after successful deletion
+        setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+      })
+      .catch((error) => console.error("Error deleting item:", error));
+  };
+
   return (
     <div className="bg-slate-50">
       <Header />
-      <div className="grid grid-cols-12 gap-[10px] mx-2">
+      <div className="grid grid-cols-12 gap-[10px] mx-18">
         <ItemInput
           handleFetch={handleFetch}
           items={items}
@@ -53,6 +64,7 @@ function App() {
           items={items}
           setItems={setItems}
           budget={budget}
+          onDelete={handleDelete}
         />
         <Wallet budget={budget} />
       </div>

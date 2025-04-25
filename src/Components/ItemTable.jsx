@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import DisplayTable from "./DisplayTable";
+import { FaTrash } from "react-icons/fa";
 
 export function ItemTable({
   items = [],
   setItems,
   budget = 0,
   formInputFields,
+  onDelete,
 }) {
   const [filter, setFilter] = useState("all");
 
   const handleToggle = (index) => {
     const newItems = [...items];
+    console.log(newItems);
     newItems[index].purchased = !newItems[index].purchased;
     setItems(newItems);
   };
@@ -72,12 +75,10 @@ export function ItemTable({
             >
               {item.itemName} - ${item.itemPrice}
             </span>
-            <button
+            <FaTrash
               onClick={() => handleDelete(index)}
-              className="text-red-500 font-bold"
-            >
-              X
-            </button>
+              className="text-[#F59E0B] hover:text-red-500 font-bold"
+            ></FaTrash>
           </div>
         ))
       )}
@@ -89,7 +90,8 @@ export function ItemTable({
       >
         {isWithinBudget ? "Good to purchase" : "Over budget!"}
       </div>
-      <DisplayTable formInputFields={formInputFields} />
+      <br />
+      <DisplayTable formInputFields={formInputFields} onDelete={onDelete} />
     </div>
   );
 }
