@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Contacts from "./Components/Contacts.jsx";
+import Page from "./Components/Page.jsx";
 
 const router = createBrowserRouter([
   {
