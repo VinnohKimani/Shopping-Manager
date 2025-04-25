@@ -86,6 +86,7 @@ export function ItemInput({
   return (
     <div className="col-span-3 ">
       <Budget budget={budget} setBudget={setBudget} onAddBudget={onAddBudget} />
+      <br />
       <form action="" className="border rounded-xl p-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 pb-2.5">
           <label htmlFor="">Item name</label>
@@ -125,7 +126,7 @@ export function ItemInput({
             <input
               type="submit"
               value="Add Item"
-              className="border mt-4 rounded-sm bg-green-400"
+              className="border mt-4 rounded-sm bg-indigo-200 hover:bg-[#4F46E5] w-full"
             />
             <ToastContainer
               position="top-right"

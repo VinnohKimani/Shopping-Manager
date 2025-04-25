@@ -24,7 +24,7 @@ function App() {
     fetch("http://localhost:3004/shoppingitems")
       .then((response) => response.json())
       .then((fetchedItems) => {
-        console.log(fetchedItems);
+        //console.log(fetchedItems);
         setItems(fetchedItems);
       })
       .catch((err) => console.error(err));
@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="bg-slate-50">
       <Header />
-      <div className="grid grid-cols-12 gap-[10px] mx-2">
+      <div className="grid grid-cols-12 gap-[10px] mx-18">
         <ItemInput
           handleFetch={handleFetch}
           items={items}
