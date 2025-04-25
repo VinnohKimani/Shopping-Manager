@@ -42,19 +42,19 @@ export function ItemTable({
       <div className="flex justify-between mb-2">
         <button
           onClick={() => setFilter("all")}
-          className="px-2 py-1 bg-gray-200 rounded"
+          className="px-2 py-1 bg-gray-200 rounded text-xl font-bold p-2"
         >
           All
         </button>
         <button
           onClick={() => setFilter("purchased")}
-          className="px-2 py-1 bg-green-200 rounded"
+          className="px-2 py-1 bg-green-200 rounded text-xl font-bold p-2"
         >
           Purchased
         </button>
         <button
           onClick={() => setFilter("remaining")}
-          className="px-2 py-1 bg-yellow-200 rounded"
+          className="px-2 py-1 bg-yellow-200 rounded text-xl font-bold p-2"
         >
           Remaining
         </button>
@@ -84,7 +84,7 @@ export function ItemTable({
       )}
 
       <div
-        className={`mt-4 p-2 rounded-lg ${
+        className={`mt-4 p-2 rounded-lg text-xl font-bold ${
           isWithinBudget ? "bg-green-200" : "bg-red-200"
         }`}
       >

@@ -1,3 +1,58 @@
 {
-  "shoppingitems": []
+  "shoppingitems": [
+    {
+      "id": "fb64",
+      "itemName": "books",
+      "itemPrice": "30000",
+      "category": "library"
+    },
+    {
+      "id": "047d",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "0695",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "cc83",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "b7be",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "374e",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "8192",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "f504",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    },
+    {
+      "id": "fb6b",
+      "itemName": "books",
+      "itemPrice": "300000",
+      "category": "library"
+    }
+  ]
 }
