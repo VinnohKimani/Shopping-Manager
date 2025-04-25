@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <Page />,
   },
   {
-    path: "/addBudget",
+    path: "/shopping-manager",
     element: <App />,
   },
 ]);

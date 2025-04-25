@@ -12,7 +12,7 @@ export function Header() {
         </h1>
         <Link to={"/"}>
           <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5]">
-            Landing Page
+            Home
           </button>
         </Link>
       </header>

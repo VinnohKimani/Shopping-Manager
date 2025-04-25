@@ -44,9 +44,9 @@ const Page = () => {
             style={{ height: "200px", verticalAlign: "middle" }}
           />
         </figure>
-        <Link to={"/addBudget"}>
+        <Link to={"/shopping-manager"}>
           <button className="bg-[#F59E0B] px-4 rounded cursor-pointer hover:bg-[#4F46E5] w-[200px] h-[200px] font-extrabold text-3xl">
-            Home
+            Shopping Manager 
           </button>
         </Link>
         <figure>

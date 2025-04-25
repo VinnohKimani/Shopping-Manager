@@ -29,7 +29,7 @@ export function ItemInput({
 
     // send the data to json server
 
-    fetch("http://localhost:3004/shoppingitems", {
+    fetch("http://localhost:3000/shoppingitems", {
       method: "POST",
       headers: {
         Accept: "*/*",
