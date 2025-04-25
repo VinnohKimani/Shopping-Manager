@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./Components/Header.jsx";
 import { ItemInput } from "./Components/ItemInput.jsx";
-import Page from "./Components/Page.jsx";
+
 import Contacts from "./Components/Contacts.jsx";
 
 const router = createBrowserRouter([

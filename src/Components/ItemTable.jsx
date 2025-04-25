@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import DisplayTable from "./DisplayTable";
+import { FaTrash } from "react-icons/fa";
 
 export function ItemTable({
   items = [],
   setItems,
   budget = 0,
   formInputFields,
+  onDelete,
 }) {
   const [filter, setFilter] = useState("all");
 
   const handleToggle = (index) => {
     const newItems = [...items];
+    console.log(newItems);
     newItems[index].purchased = !newItems[index].purchased;
     setItems(newItems);
   };
@@ -39,19 +42,19 @@ export function ItemTable({
       <div className="flex justify-between mb-2">
         <button
           onClick={() => setFilter("all")}
-          className="px-2 py-1 bg-gray-200 rounded"
+          className="px-2 py-1 bg-gray-200 rounded text-xl font-bold p-2"
         >
           All
         </button>
         <button
           onClick={() => setFilter("purchased")}
-          className="px-2 py-1 bg-green-200 rounded"
+          className="px-2 py-1 bg-green-200 rounded text-xl font-bold p-2"
         >
           Purchased
         </button>
         <button
           onClick={() => setFilter("remaining")}
-          className="px-2 py-1 bg-yellow-200 rounded"
+          className="px-2 py-1 bg-yellow-200 rounded text-xl font-bold p-2"
         >
           Remaining
         </button>
@@ -72,24 +75,23 @@ export function ItemTable({
             >
               {item.itemName} - ${item.itemPrice}
             </span>
-            <button
+            <FaTrash
               onClick={() => handleDelete(index)}
-              className="text-red-500 font-bold"
-            >
-              X
-            </button>
+              className="text-[#F59E0B] hover:text-red-500 font-bold"
+            ></FaTrash>
           </div>
         ))
       )}
 
       <div
-        className={`mt-4 p-2 rounded-lg ${
+        className={`mt-4 p-2 rounded-lg text-xl font-bold ${
           isWithinBudget ? "bg-green-200" : "bg-red-200"
         }`}
       >
         {isWithinBudget ? "Good to purchase" : "Over budget!"}
       </div>
-      <DisplayTable formInputFields={formInputFields} />
+      <br />
+      <DisplayTable formInputFields={formInputFields} onDelete={onDelete} />
     </div>
   );
 }

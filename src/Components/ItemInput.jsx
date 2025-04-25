@@ -1,13 +1,21 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Budget } from "./BudgetCard";
 
 const initialValues = {
-  budget: "",
   itemName: "",
   itemPrice: "",
   category: "",
 };
 
-export function ItemInput({ onformSubmittedData, handleFetch }) {
+export function ItemInput({
+  onformSubmittedData,
+  handleFetch,
+  budget,
+  setBudget,
+  onAddBudget,
+}) {
   const [formData, setFormData] = useState(initialValues);
   //console.log(formData);
 
@@ -17,6 +25,7 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
 
     //stringyfy
     //console.log(JSON.stringify(formData))
+    // loading toast notification
 
     // send the data to json server
 
@@ -31,6 +40,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        // will show toast success
+        toast.success("Item Added Successfully!");
         //execute handle fetch
         handleFetch();
 
@@ -40,6 +51,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
         setFormData(initialValues);
       })
       .catch(() => {
+        // show toast error
+        // toast.error("Failed to add item!");
         // handle any errors that might occur
         console.log("Unable to publish blog");
       });
@@ -72,18 +85,10 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
 
   return (
     <div className="col-span-3 ">
+      <Budget budget={budget} setBudget={setBudget} onAddBudget={onAddBudget} />
+      <br />
       <form action="" className="border rounded-xl p-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 pb-2.5">
-          <label htmlFor="">Budget</label>
-          <input
-            type="number"
-            id=""
-            name="budget"
-            value={formData.budget}
-            placeholder="Add Budget"
-            onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
-          />
           <label htmlFor="">Item name</label>
           <input
             type="text"
@@ -92,7 +97,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             value={formData.itemName}
             placeholder="Item Name"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
+            required
           />
           <label htmlFor="">Item Price</label>
           <input
@@ -102,7 +108,8 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             value={formData.itemPrice}
             placeholder="Enter Price"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
+            required
           />
           <label htmlFor="">Category</label>
           <input
@@ -112,14 +119,25 @@ export function ItemInput({ onformSubmittedData, handleFetch }) {
             value={formData.category}
             placeholder="Enter Category"
             onChange={handleChange}
-            className="bg-amber-100 rounded-lg"
+            className="bg-amber-100 rounded-lg min-h-[48px] text-2xl"
+            required
           />
-          <input
-            type="submit"
-            value="Add Item"
-            className="border mt-4 rounded-sm bg-green-400"
-          />
-          
+          <div>
+            <input
+              type="submit"
+              value="Add Item"
+              className="border mt-4 rounded-sm bg-indigo-200 hover:bg-[#4F46E5] text-xl font-bold w-full"
+            />
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              closeOnClick
+              pauseOnHover
+              draggable
+              theme="colored"
+            />
+          </div>
         </div>
       </form>
     </div>
