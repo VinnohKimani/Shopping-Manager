@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-
 export function Budget({ setBudget, onAddBudget }) {
-    const [inputBudget, setInputBudget] = useState("");
+  const [inputBudget, setInputBudget] = useState("");
   return (
-    <div className="grid border rounded-xl mb-2.5 px-4">
+    <div className="border rounded-xl p-3">
       <label htmlFor="">Budget</label>
       <input
         type="number"
@@ -13,7 +12,7 @@ export function Budget({ setBudget, onAddBudget }) {
         value={inputBudget}
         placeholder="Add Budget"
         onChange={(e) => setInputBudget(e.target.value)}
-        className="bg-amber-100 rounded-lg"
+        className="bg-amber-100 rounded-lg w-full"
         required
       />
       <button
@@ -21,7 +20,7 @@ export function Budget({ setBudget, onAddBudget }) {
           setBudget(inputBudget);
           onAddBudget(inputBudget);
         }}
-        className="border mt-4 rounded-sm bg-blue-400"
+        className="border mt-4 rounded-sm bg-indigo-200 hover:bg-[#4F46E5] w-full"
       >
         Add Budget
       </button>
