@@ -1,11 +1,3 @@
 {
-  "budget": [],
-  "shoppingitems": [
-    {
-      "id": "68de",
-      "itemName": "books",
-      "itemPrice": "30000",
-      "category": "library"
-    }
-  ]
+  "shoppingitems": []
 }
